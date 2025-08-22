@@ -1,0 +1,30 @@
+<!doctype html>
+
+<head>
+    <title>{% block title %}{% endblock %} - Sistema CadPaís</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>CadTudo Países</h1>
+    <a href="{{ url_for("home") }}">Página inicial</a> | 
+    <a href="{{ url_for("form_adicionar_pais") }}">Cadastramento</a> |
+    <a href="{{ url_for("listar_pais") }}">Listagem</a> |
+    <a href="{{ url_for("about") }}">Sobre o sistema</a> |
+    <button onclick="alterarBackground()">Mostrar Imagem de Fundo</button>
+
+    <script>
+    function alterarBackground() {
+      document.body.style.backgroundImage = "url(static/images/background.jpg)";
+    }
+    </script>
+    <hr />
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>

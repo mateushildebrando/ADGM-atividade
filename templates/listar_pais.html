@@ -1,0 +1,42 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Listagem de Países{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<table border="1">
+    <tr>
+        <td class="titulo">ID</td>
+        <td class="titulo">Nome</td>
+        <td class="titulo">População</td>
+        <td class="titulo">PIB</td>
+        <td class="titulo">PIB per capita</td>
+        <td class="titulo">Continente</td>
+        <td class="titulo">Idiomas</td>
+        <td class="titulo">Moeda</td>
+        <td class="titulo">Area</td>
+        <td class="titulo">Capital</td>
+        <td class="titulo">Governo</td>
+    </tr>
+
+    {% for p in paises %}
+    <tr>
+        <td class="valores">{{p.id}}</td>
+        <td class="valores">{{p.nome}}</td>
+        <td class="valores">{{p.populacao}}</td>
+        <td class="valores">{{p.pib}}</td>
+        <td class="valores">{{p.pib_per_capita}}</td>
+        <td class="valores">{{p.continente}}</td>
+        <td class="valores">{{p.idiomas}}</td>
+        <td class="valores">{{p.moeda}}</td>
+        <td class="valores">{{p.area}}</td>
+        <td class="valores">{{p.capital}}</td>
+        <td class="valores">{{p.governo}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}

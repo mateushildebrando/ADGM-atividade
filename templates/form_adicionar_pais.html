@@ -1,0 +1,57 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1>{% block title %}Cadastrar país{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<section class="formulario">
+    <form action="adicionar_pais">
+
+    <p>
+        Nome: <input type="text" name="nome" value="Brasil">
+    </p>
+    <p>
+        População: <input type="number" name="populacao" value="221600000">
+    </p>
+    <p>
+        PIB (em dólar) U$: <input type="number" name="pib" value="539519826000" step="0.01">
+    </p>
+    <p>
+        PIB per capita (em dólar) U$: <input type="number" name="pib_per_capita" value="9891.20" step="0.01">
+    </p>
+    <p>
+        Continente: 
+        <select name="continente">
+            <option value="américa do sul" selected>América do Sul</option>
+            <option value="américa do norte">América do Norte</option>
+            <option value="europa">Europa</option>
+            <option value="ásia">Ásia</option>
+            <option value="áfrica">África</option>
+            <option value="oceania">Oceania</option>
+        </select>
+    </p>
+    <p>
+        Idiomas: <input type="text" name="idiomas" value="Português - BR">
+    </p>
+    <p>
+        Moeda: <input type="text" name="moeda" value="Real Brasileiro">
+    </p>
+    <p>
+        Área: <input type="number" name="area" value="8510000"> km²
+    </p>
+    <p>
+        Capital: <input type="text" name="capital" value="Brasília">
+    </p>
+    <p>
+        Governo: 
+        <input type="radio" name="governo" value="Presidencialismo" checked> Presidencialismo
+        <input type="radio" name="governo" value="Parlamentarismo"> Parlamentarismo
+    </p>
+
+        <button>Cadastrar</button>
+    </form>
+</section>
+
+{% endblock %}
