@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+h1, p, a {
+    color: white;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+p, a {
+    font-size: 1em;
+}
+
+.titulo {
+    color: red;
+    background-color: rgb(70, 0, 127);
+    border-color: black;
+}
+
+.valores {
+    color: white;
+    background-color: rgb(107, 31, 169);
+    border-color: black;
+    text-align: center;}
+
+.numero {color: white;
+    background-color: rgb(107, 31, 169);
+    border-color: black;
+    text-align: right;
+}
+
+ #imagem {
+      display: none; /* A imagem começa oculta */
+      margin-top: 10px;
+      width: 300px;
+    }
+
+.formulario {
+    width: 25em;
+    background-color: rgb(95, 34, 9);
+    text-align: right;
+    padding-inline: 2em;
+    padding: 1em;
+    margin: 1.5em;
+
+}
+
+.teste input {
+    text-align: center;
+}
